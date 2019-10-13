@@ -41,14 +41,9 @@ public class calculator4 {
 			break;
 		}
 		default: {
-			var i = 1;
-			while (i < 3) {
-				System.out.println("Вы ввели недопустимую операцию, попробуйте еще раз");
-				i = i + 1;
-				operaciya = scanner.nextLine();
-			}
-			return;
+			System.out.println("Вы ввели недопустимую операцию");
 		}
+			return;
 		}
 
 		System.out.println("Введите число 1");
@@ -99,7 +94,7 @@ public class calculator4 {
 				break;
 			}
 			default: {
-				var resultat = (double)number1 / (double)number2;
+				var resultat = (double) number1 / (double) number2;
 				System.out.println("Результата равен " + resultat);
 			}
 			}
