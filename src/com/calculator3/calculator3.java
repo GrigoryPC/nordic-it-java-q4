@@ -1,11 +1,11 @@
-package com.calculator4;
+package com.calculator3;
 
 import java.util.Scanner;
 
-public class calculator4 {
+public class calculator3 {
 
 	public static void main(String[] args) {
-		// CALCULATOR 4 homework (cycle)
+		// CALCULATOR 3 homework (if/switch)
 		var scanner = new Scanner(System.in);
 
 		System.out.println("Введите математическую операцию");
@@ -36,18 +36,8 @@ public class calculator4 {
 			System.out.println("Вы ввели функцию для получения деления с остатком");
 			break;
 		}
-		case ("^"): {
-			System.out.println("Вы ввели знак возведения в степень");
-			break;
-		}
 		default: {
-			var i = 1;
-			while (i < 3) {
-				System.out.println("Вы ввели недопустимую операцию, попробуйте еще раз");
-				i = i + 1;
-				operaciya = scanner.nextLine();
-			}
-			return;
+			System.out.println("Вы ввели недопустимую операцию");
 		}
 		}
 
@@ -88,8 +78,16 @@ public class calculator4 {
 			break;
 		}
 		case ("%"): {
-			var resultat = number1 % number2;
-			System.out.println("Результата равен " + resultat);
+			switch (number2) {
+			case (0): {
+				System.out.println("Деление на 0 запрещено");
+				break;
+			}
+			default: {
+				var resultat = number1 % number2;
+				System.out.println("Результата равен " + resultat);
+			}
+			}
 			break;
 		}
 		case ("div"): {
@@ -105,23 +103,29 @@ public class calculator4 {
 			}
 			break;
 		}
-		case ("^"): {
-			if (number2 == 0) {
-				var resultat = 1;
-				System.out.println("Результата равен " + resultat);
-			} else {
-				var resultat = number1;
-				for (var n = 1; n < number2; n = n + 1) {
-					resultat = resultat * number1;
-				}
-				System.out.println("Результата равен " + resultat);
-			}
-			break;
-		}
 		default: {
 			System.out.println("Произошла ошибка в вычислениях");
 		}
 		}
+
+//		if (operaciya == "/" && number2 == 0) {
+//			System.out.println("Деление на 0 запрещено");
+//		} else if (operaciya == "*") {
+//			var resultat = number1 * number2;
+//			System.out.println("Результата равен " + resultat);
+//		} else if (operaciya == "%") {
+//			var resultat = number1 % number2;
+//			System.out.println("Результата равен " + resultat);
+//		} else if (operaciya == "+") {
+//			var resultat = number1 + number2;
+//			System.out.println("Результата равен " + resultat);
+//		} else if (operaciya == "-") {
+//			var resultat = number1 - number2;
+//			System.out.println("Результата равен " + resultat);
+//		} else {
+//			var resultat = number1 / number2;
+//			System.out.println("Результата равен " + resultat);
+//		}
 
 	}
 
