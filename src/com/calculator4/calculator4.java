@@ -33,7 +33,7 @@ public class calculator4 {
 			break;
 		}
 		case ("div"): {
-			System.out.println("Вы ввели функцию для получения деления с остатком");
+			System.out.println("Вы ввели функцию для получения деления с десятичной частью");
 			break;
 		}
 		case ("^"): {
