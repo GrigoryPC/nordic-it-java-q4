@@ -11,4 +11,13 @@ public class riby extends animal {
   public void wayOfMoving() {
     System.out.println(this.name + ":" + this.pawsAvailability + " и они плавают");
   }
+  
+  public void tell() {
+    System.out.println(this.name + ": на самом деле я не умею разговаривать");
+  }
+
+  public void kind() {
+    System.out.println(this.name + ": я имераторский карп");
+  }
+  
 }

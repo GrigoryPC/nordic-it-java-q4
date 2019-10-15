@@ -11,6 +11,15 @@ public class paukoobraznie extends animal {
   public void wayOfMoving() {
     System.out.println(this.name + ":" + this.pawsAvailability + " и они бегают");
   }
+
+  public void ability() {
+    System.out.println(this.name + ": я умею делать паутину");
+  }
+
+  public void bite() {
+    System.out.println(this.name + ": могу укусить");
+  }
+  
 }
 
 

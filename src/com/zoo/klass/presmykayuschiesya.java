@@ -9,6 +9,15 @@ public class presmykayuschiesya extends animal {
   }
 
   public void wayOfMoving() {
-    System.out.println(this.name + ":" + this.pawsAvailability + " и я ползаю");
+    System.out.println(this.name + ":" + this.pawsAvailability + " но я ползаю");
   }
+
+  public void tail() {
+    System.out.println(this.name + ": у меня есть хвост");
+  }
+
+  public void poison() {
+    System.out.println(this.name + ": у меня есть яд");
+  }
+
 }
