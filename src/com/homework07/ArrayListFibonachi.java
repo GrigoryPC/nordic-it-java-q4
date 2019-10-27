@@ -10,11 +10,12 @@ public class ArrayListFibonachi {
     var arrayContain = arrayFibonachi();
     arrayPrint(arrayContain);
 
-    System.out        .println("Пожалуйста, введите положительное число для рекурсивного вычисления факториала");
+    System.out
+        .println("Пожалуйста, введите положительное число для рекурсивного вычисления факториала");
     var scanner = new Scanner(System.in);
     var n = scanner.nextInt();
-    
-     }
+
+  }
 
   public static void arrayPrint(ArrayList<Integer> arrayContain) {
     System.out.println("Массив для чисел Фибоначчи до 30");
