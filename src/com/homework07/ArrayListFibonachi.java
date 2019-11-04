@@ -10,12 +10,23 @@ public class ArrayListFibonachi {
     var arrayContain = arrayFibonachi();
     arrayPrint(arrayContain);
 
-    System.out
-        .println("Пожалуйста, введите положительное число для рекурсивного вычисления факториала");
-    var scanner = new Scanner(System.in);
+
+    System.out.println("Введите число n больше 0 для расчета факториала при помощи рекурсии");
+    Scanner scanner = new Scanner(System.in);
+
     var n = scanner.nextInt();
+    scanner.close();
+
+    System.out.println("Факторил " + n + " = " + Faktorial (n));
 
   }
+
+  public static int Faktorial(int n) {
+    if (n == 0 || n == 1)
+      return 1;
+    return n * Faktorial (n - 1);
+  }
+
 
   public static void arrayPrint(ArrayList<Integer> arrayContain) {
     System.out.println("Массив для чисел Фибоначчи до 30");
