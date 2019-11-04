@@ -17,14 +17,14 @@ public class ArrayListFibonachi {
     var n = scanner.nextInt();
     scanner.close();
 
-    System.out.println("Факторил " + n + " = " + Faktorial (n));
+    System.out.println("Факторил " + n + " = " + Faktorial(n));
 
   }
 
   public static int Faktorial(int n) {
     if (n == 0 || n == 1)
       return 1;
-    return n * Faktorial (n - 1);
+    return n * Faktorial(n - 1);
   }
 
 
