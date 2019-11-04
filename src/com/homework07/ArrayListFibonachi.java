@@ -11,7 +11,7 @@ public class ArrayListFibonachi {
     arrayPrint(arrayContain);
 
 
-    System.out.println("Введите число n больше 0 для расчета факториала при помощи рекурсии");
+    System.out.println("Введите число n больше 0 для расчета факториала при помощи рекурсии ");
     Scanner scanner = new Scanner(System.in);
 
     var n = scanner.nextInt();
