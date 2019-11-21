@@ -20,7 +20,7 @@ public class Lesson14 {
 
 //    words.sort(new AlphabetComparator());
 //
-    words.sort(String.CASE_INSENSITIVE_ORDER);
+    words.sort(new AlphabetComparator());
     
     for (var word : words) {
       System.out.println(word);
