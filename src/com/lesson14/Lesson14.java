@@ -19,6 +19,7 @@ public class Lesson14 {
     }
 
 //    words.sort(new AlphabetComparator());
+//
     words.sort(String.CASE_INSENSITIVE_ORDER);
     
     for (var word : words) {
