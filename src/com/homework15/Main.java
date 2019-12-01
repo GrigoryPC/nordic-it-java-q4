@@ -10,56 +10,14 @@ public class Main {
     var count = new AtomicInteger();
 
     var poolThread = new ArrayList<Thread>();
-    
-    threadsRun(count, poolThread);
-    
-    System.out.println(count);
-  }
-
-  public static void threadsRun(AtomicInteger count, ArrayList<Thread> poolThread)
-      throws InterruptedException {
     for (var i = 0; i < 20; i++) {
 
-      var thread1 = new Thread(new Runnable() {
-        @Override
-        public void run() {
-          count.getAndIncrement();
-        }
-      });
-
-      var thread2 = new Thread(new Runnable() {
-        @Override
-        public void run() {
-          count.getAndIncrement();
-        }
-      });
-
-      var thread3 = new Thread(new Runnable() {
-        @Override
-        public void run() {
-          count.getAndIncrement();
-        }
-      });
-
-      var thread4 = new Thread(new Runnable() {
-        @Override
-        public void run() {
-          count.getAndIncrement();
-        }
-      });
-
-      var thread5 = new Thread(new Runnable() {
-        @Override
-        public void run() {
-          count.getAndIncrement();
-        }
-      });
-      var thread6 = new Thread(new Runnable() {
-        @Override
-        public void run() {
-          count.getAndIncrement();
-        }
-      });
+      var thread1 = new Thread (new RunClass());
+      var thread2 = new Thread (new RunClass());
+      var thread3 = new Thread (new RunClass());
+      var thread4 = new Thread (new RunClass());
+      var thread5 = new Thread (new RunClass());
+      var thread6 = new Thread (new RunClass());
 
       thread1.start();
       thread2.start();
@@ -83,5 +41,6 @@ public class Main {
     for (var thread6 : poolThread) {
       thread6.join();
     }
+    System.out.println(count);
   }
 }
