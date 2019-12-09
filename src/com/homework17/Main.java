@@ -8,7 +8,7 @@ import java.util.concurrent.LinkedBlockingDeque;
 public class Main {
 
   public static void main(String[] args) throws InterruptedException {
-    // Homework17
+    // Homework17 
 
     var queue = new LinkedBlockingDeque<Integer>();
     var vector = new LinkedBlockingDeque<Integer>();
