@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+</head>
+<body>
+
+	<form action="/login.html" method="post">
+		<input type="text" name="login" value="" placeholder = "Ваш логин"/>
+		<input type="password" name="password" value="" placeholder= "Ваш пароль"/>
+		<input type="submit" value="Войти">
+	</form>
+<div th:if="${error}">Логин или пароль введены неверно</div>
+<div th:if="${user}">Вы вошли в систему как <span th:text="${user.name}"></span></div>
+
+</body>
+</html>
