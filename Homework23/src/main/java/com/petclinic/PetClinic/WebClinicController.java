@@ -23,13 +23,13 @@ public class WebClinicController {
 			@RequestParam(name = "password") String password, Model model) {
 
 		var user = users.get(login.toLowerCase());
-		
+
 		if (user == null) {
 			users.put(login.toLowerCase(), new User(name, login, password));
 			model.addAttribute("user", user);
 			return "new_user";
 		}
-	      model.addAttribute("error", true);
-	      return "new_user";
+		model.addAttribute("error", true);
+		return "new_user";
 	}
 }
