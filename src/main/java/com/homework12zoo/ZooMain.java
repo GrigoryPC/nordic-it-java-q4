@@ -35,7 +35,7 @@ public class ZooMain {
 		if (!"".equals(name3)) {
 			cage3(scanner, cage3, name3);
 		} else {
-			System.out.println("Ввод животных для клетки 3 закончен");
+			System.out.println("Ввод животных для клетки 3 закончен ");
 		}
 		
 		System.out.println("Если хотите удалить животных из клетки, то выберите её номер от 1 до 3");
