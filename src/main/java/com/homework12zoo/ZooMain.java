@@ -21,14 +21,14 @@ public class ZooMain {
     try {
       System.out.println("Напишите не более 4 млекопитающих для клетки номер 1");
       var name = scanner.nextLine();
-      if (!"".equals(name)) {
+      if (!name.isBlank()) {
         cage1(scanner, cage1, name);
       } else {
         System.out.println("Ввод животных для клетки 1 закончен");
       }
       System.out.println("Напишите не более 3 птиц для клетки номер 2");
       var name2 = scanner.nextLine();
-      if (!"".equals(name2)) {
+      if (!name2.isBlank()) {
         cage2(scanner, cage2, name2);
       } else {
         System.out.println("Ввод животных для клетки 2 закончен");
@@ -36,7 +36,7 @@ public class ZooMain {
 
       System.out.println("Напишите не более 5 земноводных для клетки номер 3");
       var name3 = scanner.nextLine();
-      if (!"".equals(name3)) {
+      if (!name3.isBlank()) {
         cage3(scanner, cage3, name3);
       } else {
         System.out.println("Ввод животных для клетки 3 закончен ");
@@ -45,7 +45,9 @@ public class ZooMain {
       System.out.println("Если хотите удалить животных из клетки, то выберите её номер от 1 до 3");
 
       var choose = scanner.nextInt();
-
+      if (scanner.hasNextLine()) {
+        scanner.nextLine();
+      }
       removeCageChoose(choose);
 
       remove1(scanner, cage1, choose);
@@ -71,7 +73,7 @@ public class ZooMain {
     if (choose == 3) {
       System.out.println("Напишите имя животного, которое хотите удалить из клетки 3");
       var nameZoo3 = scanner.nextLine();
-      if (!"".equals(nameZoo3)) {
+      if (!nameZoo3.isBlank()) {
         cage3.remove(nameZoo3);
       } else {
         throw new NoInputException();
@@ -84,7 +86,7 @@ public class ZooMain {
 
       System.out.println("Напишите имя животного, которое хотите удалить из клетки 2");
       var nameZoo2 = scanner.nextLine();
-      if (!"".equals(nameZoo2)) {
+      if (!nameZoo2.isBlank()) {
         cage2.remove(nameZoo2);
       } else {
         throw new NoInputException();
@@ -96,7 +98,7 @@ public class ZooMain {
     if (choose == 1) {
       System.out.println("Напишите имя животного, которое хотите удалить из клетки 1");
       var nameZoo1 = scanner.nextLine();
-      if (!"".equals(nameZoo1)) {
+      if (!nameZoo1.isBlank()) {
         cage1.remove(nameZoo1);
       } else {
         throw new NoInputException();
@@ -108,7 +110,7 @@ public class ZooMain {
     for (var i = 0; i < 4; i++) {
       cage3.add(name3);
       name3 = scanner.nextLine();
-      if ("".equals(name3)) {
+      if (name3.isEmpty()) {
         System.out.println("Ввод животных для клетки 3 закончен");
         return;
       }
@@ -119,7 +121,7 @@ public class ZooMain {
     for (var i = 0; i < 2; i++) {
       cage2.add(name2);
       name2 = scanner.nextLine();
-      if ("".equals(name2)) {
+      if (name2.isEmpty()) {
         System.out.println("Ввод животных для клетки 2 закончен");
         return;
       }
@@ -130,7 +132,7 @@ public class ZooMain {
     for (var i = 0; i < 3; i++) {
       cage1.add(name);
       name = scanner.nextLine();
-      if ("".equals(name)) {
+      if (name.isEmpty()) {
         System.out.println("Ввод животных для клетки 1 закончен");
         return;
       }
