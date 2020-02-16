@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class Main {
 
   public static void main(String[] args) throws InterruptedException {
-    // Lesson18
+    // homework 18
 
     var queue = new LinkedBlockingDeque<Integer>();
     var vector = new LinkedBlockingDeque<Integer>();
