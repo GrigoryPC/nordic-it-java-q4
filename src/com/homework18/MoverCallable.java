@@ -18,9 +18,9 @@ public class MoverCallable implements Callable<Integer> {
 
     var countMoney = 0;
     var count = 0;
-    var counts = queue.poll();
+    var pollCounts = queue.poll();
 
-    while (counts != 0) {
+    while (pollCounts != null) {
       var pollMoney = vector.poll();
       countMoney += pollMoney;
       count++;
