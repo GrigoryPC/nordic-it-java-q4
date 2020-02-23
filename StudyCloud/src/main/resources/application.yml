@@ -1,0 +1,12 @@
+logging.level:
+  com.cloud.stady.nordicCloud.controller: DEBUG
+ 
+uploaded.files.path: I:\Java_school\DownloadZone
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/StudyCloud
+    driver-class-name: org.postgresql.Driver 
+    username: postgres
+    password: 1212
+    

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Мой диск</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+</head>
+<body>
+	<main role="main" class="container">
+		<form>
+			<div class="form-group">
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="row">Имя файла</th>
+							<th scope="row">Действия</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="file:${files}">
+							<td scope="col" th:text="${file.getFileName()}">2</td>
+							<td scope="col">
+								<a class="btn btn-primary" href="/delete_file.html" th:href="@{/delete_file.html(fileName=${file.getFileName()})}">Удалить</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+		<div>
+			<a class="btn btn-primary" href="uploadCloud.html">Загрузить файл</a>
+		</div>
+	</main>
+</body>
+</html>
